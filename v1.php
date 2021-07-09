@@ -6,7 +6,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 
 // クエリ'source'を取得
-$source = $_GET["source"];
+$source = htmlspecialchars($_GET["source"]);
 
 // 変数sourceに何もない場合は終了
 if(!$source){
